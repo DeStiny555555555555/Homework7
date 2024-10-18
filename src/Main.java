@@ -25,12 +25,11 @@ public class Main {
 
         System.out.println("Задание 3");
         int people = 12_000_000;
-        int difference = people / 1000;
-        int born = 17;
-        int death = 8;
-        for (int year = 1; year <= 10; year++) {
-            people = people + (difference * (born - death));
-            System.out.println("Год " + year + " численность населения составляет " + people);
+        for (int i1 = 1; i1 <= 10; i1++) {
+            int birthPeople = 17 * people / 1000;
+            int deathPeople = 8 * people / 1000;
+            people = people + birthPeople - deathPeople;
+            System.out.println("Год " + i1 + " численность населения составляет " + people);
         }
         System.out.println("Задание 4");
         int cash = 15000;
@@ -60,7 +59,7 @@ public class Main {
         int cash2 = 15000;
         int zero2 = 0;
         int r2 = 0;
-         while (r2 < 108) {
+         while (r2 < 9*12) {
              zero2 = zero2 + (zero2 / 100) * 7;
              zero2 = zero2 + cash2;
              r2++;
